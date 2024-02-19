@@ -12,37 +12,39 @@
         }
 
         .container {
-            display: flex;
-            justify-content: center;
-            margin-left: 15%;
-            margin-right: 15%;
-            background-color: white; /* Added */
+            background-color: white;
+            padding: 0 5%; /* Add a 5% padding on both sides */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         .content {
-            max-width: 950px;
-
+            max-width: 1000px; /* Adjust as needed */
+            margin: 0 auto; /* Center the content */
         }
 
-        h1 {
+        h1, h2 {
             color: #3D555E;
-            text-align: left;
-
-        }
-
-        h2 {
-            color: #3D555E;
-            margin-top: 20px;
         }
 
         iframe {
             display: block;
             margin: 20px auto;
             border: none;
+            width: 100%;
+            max-width: 100%; /* Make sure iframes don't overflow */
         }
 
-        p {
-            color: #3D555E;
+        p, ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* Adjust margins for larger screens */
+            .container {
+                margin-left: 15%;
+                margin-right: 15%;
+            }
         }
     </style>
 </head>
