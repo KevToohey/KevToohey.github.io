@@ -61,6 +61,15 @@
             margin-bottom: 20px;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px; /* Adjust the spacing between logos */
+        }
+
         @media only screen and (min-width: 600px) {
             /* Adjust margins for larger screens */
             .container {
@@ -68,6 +77,14 @@
                 margin-right: 15%;
             }
         }
+
+        /* Define styles for printing */
+        @media print {
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -88,6 +105,8 @@
             <h4>Performance of $10,000 Investment</h4>
             <iframe src="./Charts/1_Performance-Cum.html" height="370px" width="950px"></iframe>
 
+            <div class="page-break"></div>
+            <br>
             <h2>KEY CONTRIBUTORS, DETRACTORS & ATTRIBUTION</h2>
             <ul>
                 <li>Held overweight position to international equities for the bulk of 2023, biased to US equity markets.</li>
@@ -108,8 +127,7 @@
             <iframe src="./Charts/3_Allocation_History.html" height="600px" width="950px"></iframe>
             <h4>Portfolio Construction - Manager Level</h4>
             <iframe src="./Charts/3_Alloc_Mgr_Level_2.html" height="800px" width="950px"></iframe>
-            <br>
-            <div style="clear: left;"></div>
+            <div class="page-break"></div>
 
             <h2>RISK ANALYSIS</h2>
             <h4>Drawdown Periods & Recovery</h4>
@@ -128,8 +146,7 @@
                 <li>Atchison Floating Rate Sleeve [under construction]</li>
             </ul>
             <br>
-            <div style="clear: left;"></div>
-            <br>
+            <div class="page-break"></div>
 
             <h2>MARKET OVERVIEW</h2>
             <p>Australian inflation is falling faster than the RBA expected (except for insurance and rents) inflation fell to 4.1% year-on-year in the December quarter, well below the RBA’s forecast of 4.5%, and a peak of 7.8% a year ago.</p>
@@ -143,22 +160,21 @@
             <p>For conservative investors looking for income in 2024, rate cuts, as opposed to rate hikes, call for a different approach to investing. Here are some investments to think about when rates inevitably begin to come down: Term deposits, Long dated government bonds, Real Estate Investment Trusts (A-REITs & G-REITs), Preference shares, High dividend paying companies (fully franked) </p>
             <br>
 
-            <h2>HOW TO INVEST?</h2>
-            <p>Our SMA strategies are currently available on the following platforms:</p>
-            <iframe src="./CFS-logo.png" height="100px" width="auto" style="float: left;">></iframe>
-            <iframe src="./HUB24-logo.jpg" height="100px" width="auto" style="float: left;">></iframe>
-            <div style="clear: left;"></div>
-            <br>
-            <br>
-
             <h2 style="line-height: 1.2; margin: 0; padding: 0;"> DOWNLOAD .PDF VERSION</h2>
             <a href="./Monthly-Print.pdf" download style="display: inline-block;">
                 <img src="./Download-icon.png" height="66px" width="auto" style="float: left;">
             </a>
+            <br>
+            <br>
 
-            <div style="clear: left;"></div>
-
-
+            <h2>HOW TO INVEST?</h2>
+            <p>Our SMA strategies are currently available on the following platforms:</p>
+            <div class="logo-container">
+                <img src="./CFS-logo.png" class="logo" height="100px" width="250px">
+                <img src="./HUB24-logo.jpg" class="logo" height="100px" width="auto">
+            </div>
+            <br>
+            <br>
 
             <h2>CONTACT US</h2>
             <p>Please reach out via phone or email below:</p>
@@ -166,7 +182,7 @@
             <p style="line-height: 1.2; margin: 0; padding: 0;">Phone: +61 3 9642 3835</p>
             <p style="line-height: 1.2; margin: 0; padding: 0;">Address (Melbourne): Level 4, 125 Flinders Lane Melbourne Victoria 3000 Australia</p>
             <p style="line-height: 1.2; margin: 0; padding: 0;">Address (Sydney): Level 3, 63 York Street, Sydney, NSW 2000 Australia</p>
-            <br>
+            <div class="page-break"></div>
 
         </div>
     </div>
